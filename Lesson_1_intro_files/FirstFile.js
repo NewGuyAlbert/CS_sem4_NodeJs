@@ -3,5 +3,9 @@
 
 // console.log(name, "is",age,"years old");
 
-var computer = {};
+//var computer = {};
+
+
+
+
 
