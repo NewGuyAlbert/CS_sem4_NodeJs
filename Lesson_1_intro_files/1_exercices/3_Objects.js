@@ -5,6 +5,11 @@
 
 var myObj = {"message": "Hello, earthling! I bring peace."};
 
+var person = {
+    "name": "Donald",
+    "age": 71
+}
+
 // Log the message 
 
 console.log(myObj.message)
@@ -34,3 +39,7 @@ thisSong.about = "Just a tribute."
 //thisSong["about"] = "Just a tribute" 
 console.log(thisSong.about)
 // --------------------------------------
+
+delete person.age;
+
+person.newAttribute = "New value";

@@ -1,8 +1,27 @@
 const url = window.location.href;
 let videoId = url.substr(url.lastIndexOf("/") + 1);
 
-const player = `<video controls>
-<source src="/${videoId}" type="video/mp4">
-</video>`;
+$.get(`/videos/${videoId}`)
+    .done((data) => {
 
-$("#player").append(player);
+        $("#title").text(data.response.title);
+
+        const player = `<video id="player" controls>
+                    <source src="/${videoId}" >
+                    Your browser does not support the video tag.
+                </video>`;
+
+        $("#player").append(player);
+
+        $("#description").text(data.response.description);
+    })
+    .catch((error) => {
+        console.log(error);
+        $("#title").text("Couldn't find the video");
+    });
+
+
+
+
+
+

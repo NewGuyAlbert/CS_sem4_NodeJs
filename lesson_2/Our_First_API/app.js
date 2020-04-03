@@ -5,12 +5,12 @@ const request = require("request");
 
 // callback function
 // between ("") we write the path
+
 app.get("/", (req,res) => {
-    const response = {
-        message: "Hi there"
-    }
-    res.send(response);
+    res.send("Hello world");
  })
+
+
 // app.get("/test", (req,res) => {
 //     const response = {
 //         message: "TEEEEEEEEEEEEEST"
@@ -95,9 +95,10 @@ app.get("/documentation2" , (req,res) =>{
 
 })
 
-app.listen(3000, (error) => {
+const PORT = 3001
+app.listen(PORT, (error) => {
     if(error){
         console.log("Error running this server", error);
     }
-    console.log("Server is running on port 3000");
+    console.log("Server is running on port",PORT);
 });

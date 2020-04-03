@@ -17,6 +17,8 @@ var friends = [];
 friends.push("first friends", "second friend", "third friend")
 console.log(friends)
 
+cars.push("Toyota");
+
 // --------------------------------------
 // Exercise 3 - Get the index of first occurance of that value. 
 
